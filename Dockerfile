@@ -30,7 +30,7 @@ RUN apk add --no-cache --virtual .build-deps gcc build-base linux-headers postgr
     && rm -rf /var/cache/apk/* /tmp/* /var/tmp/* \
     && pip install psycopg2 eventlet gunicorn flask
 
-# Add runscript and app to root dir
+# Add entry-script and app to root dir
 COPY entry.sh /
 ADD app /app
 
