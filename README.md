@@ -3,10 +3,15 @@
 The `sosemu` service provides a minimal (52North) SOS REST API
 with the goal of providing **last values** for each station.
 
+
 This service was developed initially within the SE project to
 support the SmartApp, in absence of SOS at that time.
 
 This service will be deprecated, to be replaced by SensorThings API via `GOST`.
+
+## Hosting
+
+The Docker Image is hosted as: [smartemission/se-sosemu at DockerHub](https://hub.docker.com/r/smartemission/se-sosemu/).
 
 ## Environment
 
