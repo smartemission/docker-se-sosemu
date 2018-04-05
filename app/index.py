@@ -2,6 +2,7 @@ import os, sys
 from functools import wraps, update_wrapper
 from datetime import datetime
 from flask import Flask, render_template, request, make_response
+from reverseproxied import ReverseProxied
 
 if __name__ != '__main__':
     # When run with WSGI in Apache we need to extend the PYTHONPATH to find Python modules relative to index.py
@@ -11,6 +12,7 @@ from postgis import PostGIS
 from config import config
 
 app = Flask(__name__)
+app.wsgi_app = ReverseProxied(app.wsgi_app)
 app.debug = True
 application = app
 
