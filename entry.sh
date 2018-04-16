@@ -2,7 +2,7 @@
 
 # Runs the app with gunicorn
 
-echo "START /run.sh"
+echo "START /entry.sh"
 
 # Set timezone and time right in container.
 # See: https://www.ivankrizsan.se/2015/10/31/time-in-docker-containers/ (Alpine)
@@ -32,4 +32,4 @@ gunicorn --workers ${WSGI_WORKERS} \
 		--bind ${CONTAINER_HOST}:${CONTAINER_PORT} \
 		index:app
 
-echo "END /run.sh"
+echo "END /entry.sh"
